@@ -1,4 +1,5 @@
-
+"""
+#EXAMPLE USE:
 #Import the NWBHDF5IO module of the pynwb library
 from pynwb import NWBHDF5IO
 #Save the local file path to the NWB file
@@ -15,7 +16,8 @@ with NWBHDF5IO(filepath, mode='r') as io:
     stim_on_times = stimulus_presentation.timestamps[:]
     #Get the continuous spiking information for each neuron/unit
     all_unit_spike_times = nwb_file.units["spike_times"]
-
+"""
+    
 #Following Tutorial: https://pynwb.readthedocs.io/en/stable/tutorials/general/plot_read_basics.html#sphx-glr-tutorials-general-plot-read-basics-py
 
 #import libraries for data visualization

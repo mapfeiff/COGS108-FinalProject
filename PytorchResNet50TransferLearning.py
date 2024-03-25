@@ -1,3 +1,14 @@
+"""
+#EXAMPLE:
+#Import the PyTorch libraries
+import torch
+import torchvision
+#Define the ResNet50 model
+model = torchvision.models.resnet50(weights=torchvision.models.ResNet50_Weights.DEFAULT)
+#Change the final connection of the model to output a single value (spiking rate)
+model.fc = torch.nn.Linear(in_features=2048, out_features=1)
+"""
+
 #Referencing tutorials: 
 # - https://medium.com/@lucrece.shin/chapter-3-transfer-learning-with-resnet50-from-dataloaders-to-training-seed-of-thought-67aaf83155bc
 # - https://www.kaggle.com/code/pmigdal/transfer-learning-with-resnet-50-in-pytorch
